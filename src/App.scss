@@ -1,0 +1,317 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
+/* Variables */
+
+$red: hsl(0, 100%, 74%);
+$green: hsl(154, 59%, 51%);
+$accent: hsl(248, 32%, 49%);
+$darkBlue: hsl(249, 10%, 26%);
+$grayBlue: hsl(246, 25%, 77%);
+$shadow: hsla(249, 10%, 26%, 0.2);
+$fontSize: 16px;
+$fontFamily: 'Poppins', sans-serif;
+$lightest: 400;
+$light: 500;
+$heavy: 600;
+$heaviest: 700;
+$imgMobile: '/images/bg-intro-mobile.png';
+$imgDesktop: '/images/bg-intro-desktop.png';
+
+/* Mobile design */
+
+html {
+    width: 100%;
+    height: 100%;
+
+    body {
+        width: 100%;
+        height: 100%;
+        margin: 0;
+        background: url($imgMobile), $red;
+        background-repeat: no-repeat;
+        background-position: 0 0;
+        background-size: cover;
+
+        #root {
+            width: fit-content;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 4.8rem 1.5rem;
+            font-family: $fontFamily;
+            font-size: $fontSize;
+            font-weight: $light;
+            color: white;
+            gap: 3.8rem;
+
+            header {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                gap: 1rem;
+                margin-top: 0.8rem;
+                font-family: $fontFamily;
+
+                h1 {
+                    margin: 0;
+                    font-size: 1.7rem;
+                    font-weight: $heaviest;
+                }
+
+                p {
+                    margin: 0;
+                    font-weight: $lightest;
+                    line-height: 1.65rem;
+
+                    strong {
+                        font-weight: $heavy;
+                    }
+                }
+            }
+
+            main {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                gap: 1.5rem;
+
+                aside {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-align: center;
+                    background-color: $accent;
+                    border-radius: 0.5rem;
+                    height: 5.5rem;
+                    width: auto;
+                    box-shadow: 0rem 0.5rem 0rem $shadow;
+                    font-family: $fontFamily;
+
+                    p {
+                        margin: 0;
+                        font-size: 0.95rem;
+                        padding: 0rem 4rem;
+                        font-weight: $lightest;
+                        line-height: 1.6rem;
+                        color: $grayBlue;
+
+                        strong {
+                            color: white;
+                        }
+                    }
+                }
+
+                form {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                    background-color: white;
+                    border-radius: 0.6rem;
+                    height: fit-content;
+                    width: auto;
+                    padding: 1.5rem;
+                    box-shadow: 0rem 0.5rem 0rem $shadow;
+                    gap: 1.1rem;
+
+                    div {
+                        width: 100%;
+                        height: 3.3rem;
+                        position: relative;
+                        color: $red;
+                        font-weight: $light;
+                        font-size: 0.7rem;
+                        font-style: italic;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        input {
+                            border: 1px solid lightgray;
+                            border-radius: 0.3rem;
+                            width: 90%;
+                            height: 40%;
+                            padding: 1rem;
+                            color: $darkBlue;
+                            font-weight: $heavy;
+                            font-size: 0.95rem;
+                            font-family: $fontFamily;
+
+                            &::placeholder {
+                                color: gray;
+                                font-weight: $heavy;
+                                font-size: 0.9rem;
+                            }
+
+                            &:focus {
+                                border: 1px solid $accent;
+                                outline: none;
+                            }
+                        }
+
+                        input.invalid {
+                            border: 2px solid $red;
+                            color: $red;
+                        }
+
+                        span {
+                            position: absolute;
+                            bottom: -1.2rem;
+                            right: 0;
+                        }
+
+                        img {
+                            position: absolute;
+                            bottom: 0.8rem;
+                            right: 0.9rem;
+                        }
+                    }
+
+                    button {
+                        margin: 0;
+                        border: none;
+                        width: 100%;
+                        height: 3.3rem;
+                        border-radius: 0.5rem;
+                        color: white;
+                        background-color: $green;
+                        text-align: center;
+                        font-size: 0.9rem;
+                        font-weight: $light;
+                        letter-spacing: 1px;
+                        box-shadow: 0rem 0.2rem 0rem hsla(154, 59%, 45%);
+                        font-family: $fontFamily;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+
+                        &:hover {
+                            cursor: pointer;
+                            background-color: hsla(154, 59%, 51%, 0.7);
+                            box-shadow: 0rem 0.2rem 0rem hsla(154, 59%, 45%, 0.8);
+                        }
+                    }
+
+                    p {
+                        margin: 0;
+                        margin-top: -0.5rem;
+                        margin-bottom: 0.1rem;
+                        color: $grayBlue;
+                        text-align: center;
+                        padding: 0 1.5rem;
+                        font-size: 0.65rem;
+                        line-height: 1.4rem;
+                        font-family: $fontFamily;
+
+                        strong {
+                            color: $red;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+/* Desktop design */
+
+@media (min-width:1000px) {
+    html {
+        width: 100%;
+        height: 100%;
+
+        body {
+            width: 100%;
+            height: 100%;
+            background: url($imgDesktop), $red;
+            background-position: 0.8rem 0rem;
+            background-repeat: no-repeat;
+
+            #root {
+                flex-direction: row;
+                width: fit-content;
+                padding: 0 10.5rem;
+                height: 100%;
+                justify-content: center;
+                gap: 2rem;
+
+                header {
+                    flex: 1;
+                    align-items: flex-start;
+                    text-align: left;
+                    margin-top: 0rem;
+                    gap: 2.3rem;
+
+                    h1 {
+                        font-size: 3.1rem;
+                        line-height: 3.3rem;
+                        margin-bottom: -0.3rem;
+                    }
+                }
+
+                main {
+                    flex: 1;
+
+                    aside {
+                        height: 3.7rem;
+                        width: 100%;
+
+                        p {
+                            font-size: 0.96rem;
+                            padding: 0rem 4rem;
+                            line-height: 1.6rem;
+                        }
+                    }
+
+                    form {
+                        width: 100%;
+                        padding: 0rem;
+                        gap: 1.4rem;
+
+                        div:nth-child(1) {
+                            margin-top: 2.5rem;
+                        }
+
+                        div {
+
+                            input {
+                                width: 100%;
+                                margin: 0rem 2.5rem;
+                                padding-left: 2rem;
+                            }
+
+                            span {
+                                bottom: -1.5rem;
+                                right: 3rem;
+                            }
+
+                            img {
+                                right: 4rem;
+                            }
+                        }
+
+                        div.invalid { 
+                            margin-bottom: 1.5rem;
+                        }
+
+                        button {
+                            margin: 0rem 2.5rem;
+                            padding-top: 0.5rem;
+                        }
+
+                        p {
+                            margin-bottom: 2.5rem;
+                        }
+                    }
+                }
+            }
+
+        }
+    }
+}
